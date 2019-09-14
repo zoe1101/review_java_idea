@@ -1,4 +1,4 @@
-package 二分查找;
+package 查找算法;
 
 public class 二分查找 {
     public int search(int[] nums, int target) {

@@ -1,9 +1,13 @@
 package test;
 import com.mysql.cj.util.LRUCache;
 import org.omg.PortableServer.LIFESPAN_POLICY_ID;
+import sun.misc.InnocuousThread;
+import 字符串.实现strStr;
 
+import javax.xml.ws.BindingProvider;
 import java.util.*;
 import java.util.Map.Entry;
+import java.util.concurrent.TimeoutException;
 
 
 import static 数组与矩阵问题.计算数组的小和.merge;
@@ -11,7 +15,7 @@ import static 数组与矩阵问题.计算数组的小和.merge;
 
 public class mytest{
 	//二叉树结构
-	public class TreeNode {
+	public static class TreeNode {
 	    int val = 0;
 	    TreeNode left = null;
 	    TreeNode right = null;
@@ -21,6 +25,18 @@ public class mytest{
 
 	    }
 	}
+
+    //带父节点的二叉树结构
+    public static class TreeNodep {
+        int val = 0;
+        TreeNodep left = null;
+        TreeNode right = null;
+        TreeNode parent = null;
+
+        public TreeNodep(int val) {
+            this.val = val;
+        }
+    }
 	//链表结构
 	public static class ListNode {
 	    int val;
@@ -51,11 +67,15 @@ public class mytest{
 
 
 
-	public static void main(String[] args) {
+
+    static int i;
+    public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
         String str=scanner.nextLine();
-        String[] strs=str.trim().split(" ");
-        System.out.println(strs[strs.length-1].length());
+
+
+
+
 
 	}
 	

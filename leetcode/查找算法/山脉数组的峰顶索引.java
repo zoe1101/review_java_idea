@@ -1,4 +1,4 @@
-package 二分查找;
+package 查找算法;
 /*
 我们把符合下列属性的数组 A 称作山脉：
 A.length >= 3

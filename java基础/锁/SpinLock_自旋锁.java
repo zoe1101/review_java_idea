@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * @author ZOE
  * @date 2019/9/8 11:03
  */
-public class 自旋锁 {
+public class SpinLock_自旋锁 {
     private AtomicReference<Thread> cas=new AtomicReference<Thread>();
     //加锁
     public void lock(){

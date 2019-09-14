@@ -1,15 +1,16 @@
 package 锁;
 
-
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * @author ZOE
  * @date 2019/9/8 13:20
  */
-public class 可重入的自旋锁 {
+public class ReentrantSpinLock_可重入的自旋锁 {
     private AtomicReference<Thread> cas=new AtomicReference<>();
+//    为了实现可重入锁，我们需要引入一个计数器，用来记录获取锁的线程数。
     private int count;
+
     public void lock(){
         Thread current=Thread.currentThread();
         if (current==cas.get()){// 如果当前线程已经获取到了锁，线程数增加一，然后返回
